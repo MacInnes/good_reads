@@ -1,6 +1,8 @@
 class Book < ApplicationRecord
   has_many :reviews
 
+  # I feel like there's a better way to do these, feedback is welcome:
+
   def average_rating
     total = 0
     reviews.each do |review|
